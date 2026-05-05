@@ -21,17 +21,17 @@ public class ArrayTransformation {
         }
 
         int[] B = new int[n];
-        for (int i = 0;i < n;i++){
-            B[i] = (A[i] - A[0]) / K;
+        for (int i=0;i<n;i++){
+            B[i] =(A[i]-A[0])/K;
         }
 
         Arrays.sort(B);
 
         int median = B[n/2];
 
-        int operations = 0;
+        int operations =0;
         for(int x : B){
-           operations += Math.abs(x - median);
+           operations += Math.abs(x-median);
         }
 
         System.out.println(operations);
